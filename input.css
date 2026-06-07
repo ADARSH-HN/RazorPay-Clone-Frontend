@@ -24,3 +24,20 @@
     hover:-translate-y-1;
 }
 
+@theme {
+
+    --animate-shrink : shrink linear;
+
+    @keyframes shrink {
+        from{
+            scale:1;
+        }
+        to{
+            scale:0.9;
+        }
+    }
+}
+
+@utility scroll-shrink {
+    animation-timeline:scroll();
+}
