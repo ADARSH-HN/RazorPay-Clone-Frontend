@@ -49,3 +49,76 @@
     duration-300
     ease-in-out;
 }
+
+
+@utility card{
+    @apply
+    overflow-hidden w-[270px] h-[420px] relative shadow-sm/20;
+}
+
+@utility card-content{
+    @apply
+    absolute -bottom-20 bg-white w-full h-[200px] p-5 text-start;
+}
+
+@utility blue-bg-btn{
+    @apply
+    bg-blue-500 p-2 text-white hover-btn font-bold rounded;
+}
+
+
+@utility card-image{
+    @apply
+    max-w-none h-full w-full absolute -top-30;
+}
+
+@utility cards{
+    @apply
+    p-10 pb-20 sticky bg-white shadow-sm/20 rounded-md overflow-hidden animate-shrink scroll-shrink;
+}
+
+
+@theme {
+    --animate-profile-scroll:image-scroll 30s linear infinite;
+
+    @keyframes image-scroll {
+        from{
+            transform:translateX(0);
+        }
+        to{
+            transform:translateX(-100%)
+        }
+        
+    }
+}
+@utility card-3d-space{
+    @apply
+    h-90 w-90 [perspective:1000px] relative ;
+}
+
+@utility profile-container{
+    @apply
+    w-full flex gap-5 animate-profile-scroll group-hover/card:[animation-play-state:paused];
+}
+
+@utility profile-card{
+    @apply
+     w-full absolute inset-0 rounded-xl transition-all duration-700 [transform-style:preserve-3d] group-hover/profile:[transform:rotateY(180deg)] shadow-sm/60;
+}
+
+
+
+@utility profile-content-front{
+    @apply
+    relative h-full w-full rounded-xl after:content-[''] after:z-20 after:h-full after:w-full after:absolute after:bottom-0 after:bg-gradient-to-t after:from-black after:to-transparent overflow-hidden [backface-visibility:hidden]  ;
+}
+
+@utility profile-content-back{
+    @apply
+    h-full w-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-xl p-10 absolute inset-0 shadow-sm/60 bg-white ;
+}
+
+@utility profile-card-container{
+    @apply
+    w-max even:translate-y-30;
+}
