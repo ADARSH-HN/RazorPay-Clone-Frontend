@@ -11,11 +11,8 @@ Check out the hosted version here:
 
 ## 📸 Preview
 
-(Add project screenshot here)
+![preview](./assets/preview.png)
 
-```
-![Razorpay Clone Preview](./assets/images/preview.png)
-```
 
 ## ✨ Features
 
